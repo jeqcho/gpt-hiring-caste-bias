@@ -1,8 +1,8 @@
 demo,top,top_og,selection_rate,disparate_impact_ratio,job,model,rank
 Dalit_W,52,49,0.52,1.0,HR specialist,gpt-4o,1
 Brahmin_W,48,51,0.48,0.923076923076923,HR specialist,gpt-4o,1
-Dalit_W,59,49,0.59,1.0,software engineer,gpt-4o,1
-Brahmin_W,41,51,0.41,0.6949152542372882,software engineer,gpt-4o,1
+Brahmin_W,509,506,0.509,1.0,software engineer,gpt-4o,1
+Dalit_W,491,494,0.491,0.9646365422396856,software engineer,gpt-4o,1
 Brahmin_W,50,51,0.5,1.0,retail,gpt-4o,1
 Dalit_W,50,49,0.5,1.0,retail,gpt-4o,1
 Brahmin_W,51,51,0.51,1.0,financial analyst,gpt-4o,1

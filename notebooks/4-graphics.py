@@ -25,30 +25,46 @@ suffix = "caste/" # caste
 
 def create_selection_rate_plot(input_file=f'../data/output/{suffix}performance_ranking.csv', 
                              demo_mapping=None,
-                             reference_rate=0.125):
+                             reference_rate=None):
     """
     Create separate horizontal bar charts showing selection rates by demographic groups for each job.
     
     Args:
         input_file (str): Path to the CSV file containing the data
         demo_mapping (dict): Optional mapping for demographic abbreviations
-        reference_rate (float): Reference rate to center the bars around (default 12.5%)
+        reference_rate (float): Reference rate to center the bars around. If None, will be set based on analysis type.
     """
     # Read the data
     df = pd.read_csv(input_file)
     
+    # Set reference rate and limits based on analysis type
+    if "caste" in input_file:
+        reference_rate = 0.50  # 50% for caste analysis
+        xlim_min, xlim_max = 0.35, 0.65  # 35% to 65% for caste
+        xticks = [0.35, 0.40, 0.50, 0.60, 0.65]  # Custom ticks for caste
+    else:
+        reference_rate = 0.125  # 12.5% for race/gender analysis
+        xlim_min, xlim_max = 0.06, 0.20  # 6% to 20% for race/gender
+        xticks = [0.08, 0.10, 0.125, 0.15, 0.17]  # Custom ticks for race/gender
+    
     # Default demographic mapping if none provided
     if demo_mapping is None:
-        demo_mapping = {
-            'B_W': 'Black Woman',
-            'B_M': 'Black Man',
-            'W_W': 'White Woman',
-            'W_M': 'White Man',
-            'A_W': 'Asian Woman',
-            'A_M': 'Asian Man',
-            'H_W': 'Hispanic Woman',
-            'H_M': 'Hispanic Man'
-        }
+        if "caste" in input_file:
+            demo_mapping = {
+                'Dalit_W': 'Dalit',
+                'Brahmin_W': 'Brahmin'
+            }
+        else:
+            demo_mapping = {
+                'B_W': 'Black Woman',
+                'B_M': 'Black Man',
+                'W_W': 'White Woman',
+                'W_M': 'White Man',
+                'A_W': 'Asian Woman',
+                'A_M': 'Asian Man',
+                'H_W': 'Hispanic Woman',
+                'H_M': 'Hispanic Man'
+            }
     
     # Get unique jobs
     jobs = df['job'].unique()
@@ -81,16 +97,16 @@ def create_selection_rate_plot(input_file=f'../data/output/{suffix}performance_r
         plt.title(f'Selection Rate by Demographic Group - {job.title()}')
         
         # Set x-axis limits and format as percentages
-        plt.xlim(0.06, 0.20)
-        plt.xticks([0.08, 0.10, 0.125, 0.15, 0.17])
+        plt.xlim(xlim_min, xlim_max)
+        plt.xticks(xticks)
         plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x*100:.1f}%'))
         
-        # Add reference line at 12.5%
+        # Add reference line
         plt.axvline(x=reference_rate, color='black', linestyle='--', alpha=0.5)
         
         # Add annotations at the corners of the plot
-        plt.text(0.06, len(avg_rates) - 0.5, 'Worse Treatment', ha='left', va='center')
-        plt.text(0.20, len(avg_rates) - 0.5, 'Better Treatment', ha='right', va='center')
+        plt.text(xlim_min, len(avg_rates) - 0.5, 'Worse Treatment', ha='left', va='center')
+        plt.text(xlim_max, len(avg_rates) - 0.5, 'Better Treatment', ha='right', va='center')
         
         # Adjust layout
         plt.tight_layout()
