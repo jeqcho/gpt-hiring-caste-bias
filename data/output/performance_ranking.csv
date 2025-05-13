@@ -63,3 +63,13 @@ W_M,130,125,0.13,0.935251798561151,financial analyst,gpt-4,1
 H_W,120,125,0.12,0.8633093525179855,financial analyst,gpt-4,1
 B_W,113,125,0.113,0.8129496402877697,financial analyst,gpt-4,1
 B_M,102,125,0.102,0.7338129496402876,financial analyst,gpt-4,1
+W_W,1,1,0.5,1.0,HR specialist,gpt-4o,1
+B_M,2,1,0.2,1.0,retail,gpt-4o,1
+W_W,1,3,0.1,0.5,retail,gpt-4o,1
+B_W,1,1,0.1,0.5,retail,gpt-4o,1
+H_W,1,4,0.1,0.5,retail,gpt-4o,1
+A_M,1,1,0.1,0.5,retail,gpt-4o,1
+B_W,3,1,0.3,1.0,financial analyst,gpt-4o,1
+H_W,1,4,0.1,0.33333333333333337,financial analyst,gpt-4o,1
+B_M,1,1,0.1,0.33333333333333337,financial analyst,gpt-4o,1
+W_W,1,3,0.1,0.33333333333333337,financial analyst,gpt-4o,1
