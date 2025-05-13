@@ -1,4 +1,33 @@
 job,race/ethnicity,sex,top_ranked_perc,top_impact_ratio,bottom_ranked_perc,model
-retail,W,W,0.1,0.5,0.2,gpt-4o
-retail,A,M,0.1,0.5,0.1,gpt-4o
-financial analyst,W,W,0.1,0.33333333333333337,0.2,gpt-4o
+HR specialist,B,W,0.171,1.0,0.099,gpt-4o
+HR specialist,H,W,0.158,0.9239766081871345,0.096,gpt-4o
+HR specialist,A,W,0.14,0.8187134502923977,0.115,gpt-4o
+HR specialist,W,W,0.129,0.7543859649122807,0.139,gpt-4o
+HR specialist,B,M,0.107,0.6257309941520467,0.12,gpt-4o
+HR specialist,H,M,0.106,0.6198830409356725,0.124,gpt-4o
+HR specialist,A,M,0.096,0.5614035087719298,0.128,gpt-4o
+HR specialist,W,M,0.093,0.5438596491228069,0.179,gpt-4o
+software engineer,B,W,0.165,1.0,0.1,gpt-4o
+software engineer,H,W,0.142,0.8606060606060605,0.093,gpt-4o
+software engineer,A,W,0.141,0.8545454545454544,0.098,gpt-4o
+software engineer,A,M,0.121,0.7333333333333333,0.106,gpt-4o
+software engineer,H,M,0.115,0.696969696969697,0.132,gpt-4o
+software engineer,B,M,0.114,0.6909090909090909,0.126,gpt-4o
+software engineer,W,W,0.111,0.6727272727272727,0.162,gpt-4o
+software engineer,W,M,0.091,0.5515151515151515,0.183,gpt-4o
+retail,H,W,0.165,1.0,0.109,gpt-4o
+retail,B,W,0.162,0.9818181818181818,0.09,gpt-4o
+retail,A,W,0.148,0.8969696969696969,0.109,gpt-4o
+retail,B,M,0.115,0.696969696969697,0.125,gpt-4o
+retail,H,M,0.11,0.6666666666666666,0.13,gpt-4o
+retail,A,M,0.105,0.6363636363636364,0.13,gpt-4o
+retail,W,W,0.104,0.6303030303030303,0.142,gpt-4o
+retail,W,M,0.091,0.5515151515151515,0.165,gpt-4o
+financial analyst,B,W,0.168,1.0,0.11,gpt-4o
+financial analyst,H,W,0.15,0.8928571428571428,0.08,gpt-4o
+financial analyst,A,W,0.146,0.869047619047619,0.099,gpt-4o
+financial analyst,W,W,0.123,0.7321428571428571,0.151,gpt-4o
+financial analyst,B,M,0.12,0.7142857142857142,0.142,gpt-4o
+financial analyst,A,M,0.104,0.619047619047619,0.112,gpt-4o
+financial analyst,H,M,0.103,0.613095238095238,0.131,gpt-4o
+financial analyst,W,M,0.086,0.5119047619047619,0.175,gpt-4o
